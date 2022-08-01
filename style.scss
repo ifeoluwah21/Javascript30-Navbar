@@ -23,6 +23,7 @@ body {
     top: 0;
     right: 0;
     width: 100%;
+    height: 100%;
 
     transform: translateY(-250%);
     opacity: 0;
@@ -32,8 +33,28 @@ body {
       transform: translateY(0);
       opacity: 1;
     }
+  }
 
-    & section {
+  .nav {
+    &__item-container {
+      display: flex;
+      flex-flow: row nowrap;
+
+      margin: 1.5rem 0;
+    }
+
+    &__btn--green {
+      background-color: rgb(2, 49, 2);
+      padding: 1rem 1.5rem;
+      border-radius: 10px;
+      color: rgb(255, 255, 255);
+      font-size: 1rem;
+      border: none;
+      width: 10rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    &__section {
       width: 90%;
       max-width: 380px;
       margin: 2rem auto 0;
@@ -42,7 +63,28 @@ body {
       height: 100%;
       padding: 3rem 2rem;
       border-radius: 15px;
+    }
 
+    &__list {
+      list-style: none;
+    }
+
+    &__item {
+      cursor: pointer;
+      padding: 0.5rem 0;
+
+      &--btn {
+        margin-top: 1rem;
+        text-align: center;
+        position: fixed;
+        bottom: 6%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      &:hover > section {
+        display: block;
+      }
       & > div {
         width: 100%;
         display: flex;
@@ -57,15 +99,10 @@ body {
           font-family: "Inter", sans-serif;
         }
       }
-    }
-  }
 
-  .nav {
-    &__item-container {
-      display: flex;
-      flex-flow: row nowrap;
-
-      margin: 1.5rem 0;
+      & > section {
+        display: none;
+      }
     }
     &__close-icon {
       cursor: pointer;
@@ -105,10 +142,10 @@ body {
 }
 
 .about-section {
+  margin-bottom: 2rem;
   &__h1 {
     font-size: 2rem;
     font-weight: 800;
-
     max-width: 340px;
     line-height: 1.1;
     & span {
@@ -133,6 +170,7 @@ body {
     border: none;
     width: 10rem;
     font-weight: 700;
+    cursor: pointer;
   }
 }
 
@@ -162,6 +200,17 @@ body {
         width: 90%;
       }
     }
+  }
+}
+
+.hero {
+  &__container {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  &__img {
+    width: 100%;
   }
 }
 

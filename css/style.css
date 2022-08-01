@@ -24,6 +24,7 @@ body {
   top: 0;
   right: 0;
   width: 100%;
+  height: 100%;
   transform: translateY(-250%);
   opacity: 0;
   transition: all 0.5s ease;
@@ -32,7 +33,23 @@ body {
   transform: translateY(0);
   opacity: 1;
 }
-.header__nav section {
+.header .nav__item-container {
+  display: flex;
+  flex-flow: row nowrap;
+  margin: 1.5rem 0;
+}
+.header .nav__btn--green {
+  background-color: rgb(2, 49, 2);
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  color: rgb(255, 255, 255);
+  font-size: 1rem;
+  border: none;
+  width: 10rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+.header .nav__section {
   width: 90%;
   max-width: 380px;
   margin: 2rem auto 0;
@@ -42,23 +59,39 @@ body {
   padding: 3rem 2rem;
   border-radius: 15px;
 }
-.header__nav section > div {
+.header .nav__list {
+  list-style: none;
+}
+.header .nav__item {
+  cursor: pointer;
+  padding: 0.5rem 0;
+}
+.header .nav__item--btn {
+  margin-top: 1rem;
+  text-align: center;
+  position: fixed;
+  bottom: 6%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.header .nav__item:hover > section {
+  display: block;
+}
+.header .nav__item > div {
   width: 100%;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
 }
-.header__nav section > div h2 {
+.header .nav__item > div h2 {
   font-size: 1.1rem;
   font-weight: 700;
   color: rgb(120, 120, 120);
   font-family: "Inter", sans-serif;
 }
-.header .nav__item-container {
-  display: flex;
-  flex-flow: row nowrap;
-  margin: 1.5rem 0;
+.header .nav__item > section {
+  display: none;
 }
 .header .nav__close-icon {
   cursor: pointer;
@@ -91,6 +124,9 @@ body {
   width: 100%;
 }
 
+.about-section {
+  margin-bottom: 2rem;
+}
 .about-section__h1 {
   font-size: 2rem;
   font-weight: 800;
@@ -117,6 +153,7 @@ body {
   border: none;
   width: 10rem;
   font-weight: 700;
+  cursor: pointer;
 }
 
 .review {
@@ -141,6 +178,14 @@ body {
 }
 .review__icon div img {
   width: 90%;
+}
+
+.hero__container {
+  width: 90%;
+  margin: 0 auto;
+}
+.hero__img {
+  width: 100%;
 }
 
 footer {
