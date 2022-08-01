@@ -8,6 +8,7 @@ body {
   max-width: 380px;
   margin: 0 auto;
   font-family: "Inter", sans-serif;
+  background-color: #fffeec;
 }
 .header {
   padding: 2rem 0;
@@ -22,15 +23,25 @@ body {
     top: 0;
     right: 0;
     width: 100%;
-    display: none;
+
+    transform: translateY(-250%);
+    opacity: 0;
+    transition: all 0.5s ease;
+
+    &--toggle {
+      transform: translateY(0);
+      opacity: 1;
+    }
 
     & section {
       width: 90%;
-      margin: 0 auto;
-      background: aliceblue;
+      max-width: 380px;
+      margin: 2rem auto 0;
+      background: #ffffff;
       z-index: 4;
       height: 100%;
       padding: 3rem 2rem;
+      border-radius: 15px;
 
       & > div {
         width: 100%;
@@ -53,8 +64,11 @@ body {
     &__item-container {
       display: flex;
       flex-flow: row nowrap;
-      justify-content: space-between;
+
       margin: 1.5rem 0;
+    }
+    &__close-icon {
+      cursor: pointer;
     }
 
     &__item--flex {
@@ -83,6 +97,7 @@ body {
 
   &__menu {
     width: 2rem;
+    cursor: pointer;
     img {
       width: 100%;
     }
