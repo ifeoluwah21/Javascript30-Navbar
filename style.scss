@@ -45,7 +45,7 @@ body {
 
     &__btn--green {
       background-color: rgb(2, 49, 2);
-      padding: 1rem 1.5rem;
+
       border-radius: 10px;
       color: rgb(255, 255, 255);
       font-size: 1rem;
@@ -79,11 +79,19 @@ body {
         position: fixed;
         bottom: 6%;
         left: 50%;
+        padding: 1rem 1.5rem;
         transform: translateX(-50%);
       }
 
       &:hover > section {
         display: block;
+      }
+
+      & > h2 {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: rgb(120, 120, 120);
+        font-family: "Inter", sans-serif;
       }
       & > div {
         width: 100%;
@@ -215,7 +223,7 @@ body {
 }
 
 footer {
-  padding: 4rem 0;
+  margin: 4rem 0;
 }
 
 .footer {
@@ -240,6 +248,160 @@ footer {
       & img {
         width: 100%;
       }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    width: 90%;
+    max-width: 1120px;
+  }
+
+  .header {
+    &__logo {
+      width: 10rem;
+    }
+    .nav {
+      &__item--btn {
+        margin-top: 0;
+        position: static;
+        transform: translateX(0);
+      }
+
+      &__list {
+        list-style: none;
+        display: flex;
+        margin-right: 15%;
+      }
+
+      &__list dl {
+        list-style: none;
+        display: flex;
+        flex-flow: column nowrap;
+        width: 90%;
+        margin: 0 auto;
+      }
+
+      &__close-icon {
+        display: none;
+      }
+      &__section {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 0 0 0;
+        height: 100%;
+        padding-right: 0;
+        background-color: inherit;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+
+      &__item {
+        padding: 1rem 1rem;
+
+        &:hover > section {
+          display: block;
+          position: absolute;
+          max-width: 380px;
+          background-color: #fff;
+          margin-top: 1rem;
+        }
+      }
+    }
+
+    &__nav {
+      position: static;
+      width: 100%;
+      height: 100%;
+      transform: translateY(0);
+      opacity: 1;
+      transition: none;
+    }
+    &__menu {
+      display: none;
+    }
+  }
+
+  main {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .about-section {
+    width: 60%;
+    margin-bottom: 0;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    &__h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      max-width: 650px;
+      line-height: 1.1;
+    }
+
+    &__text {
+      font-family: "Inter", sans-serif;
+      font-size: 1.5rem;
+      font-weight: 400;
+      max-width: 640px;
+      color: rgb(120, 120, 120);
+      padding: 1rem 0;
+    }
+  }
+
+  .hero {
+    width: 35%;
+
+    &__container {
+      width: 100%;
+      height: 100%;
+    }
+
+    &__img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .review {
+    max-width: 435px;
+    &__text {
+      font-size: 1.2rem;
+    }
+
+    &__icon {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: center;
+      width: 40%;
+      max-width: 100px;
+      & > div {
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .footer {
+    margin: 4rem 0;
+    &__text-box p {
+      font-size: 1.5rem;
+    }
+
+    &__text-box {
+      padding-bottom: 3.5rem;
+    }
+
+    &__logo {
+      display: flex;
+      gap: 35px;
     }
   }
 }
